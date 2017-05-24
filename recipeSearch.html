@@ -1,25 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kaushan+Script|Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta charset="UTF-8">
-	<title>Recipe Search</title>
+    <meta charset="UTF-8">
+    <title>Recipe Search</title>
 </head>
+
 <body>
-	<h1>Recipe</h1>
-	<button id= "click"></button>
-
-
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="https://www.linkedin.com/in/patrick-o-hara-8b959b136/">Patrick</a></li>
+        <li><a href="https://www.facebook.com/elias.p.benson">Eli</a></li>
+        <li><a href="https://github.com/BigFos">Steven</a></li>
+        <li><a href="https://www.linkedin.com/in/michael-tolmie-83527537/">Michael</a></li>
+    </ul>
+    <nav>
+        <div class="nav-wrapper">
+            <div id="logo">Recipe Search
+                <ul class="right hide-on-down">
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button" href="#" data-activates="dropdown1"><i class="material-icons left">perm_identity</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col s3 follow">
+                <div class="card">
+                    <div id="bar" class="card-content">
+                        <div id="h1">Ingredients I have</div>
+                        <div class="card">
+                            <div class="card-content black-text">
+                                <span class="card-title">Tell us what ingredients you have to work with!</span>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+      <a id="ingredientAdd" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">add</i></a>
+      </span>
+                                    <input type="text" class="form-control" placeholder="Search for...">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="h2">List of Ingredients</div>
+                        <div class="card">
+                            <div class="card-content black-text">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Ingredients</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="card-action center">
+                                    <a href="#">What Can I Make?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grey navigation panel -->
+            </div>
+            <div id="recipeColumn" class="col s9">
+                <div id="h3">Recipes</div>
+                <div id="recipeCards" class="card">
+                    <div class="card-image">
+                        <img src="https://static-communitytable.parade.com/wp-content/uploads/2015/08/Grilled-Chicken-1240.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More Info</a>
+                        <a href="#">Buy remaining items on amazon</a>
+                    </div>
+                </div>
+                <div id="recipeCards" class="card">
+                    <div class="card-image">
+                        <img src="https://static-communitytable.parade.com/wp-content/uploads/2015/08/Grilled-Chicken-1240.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More Info</a>
+                        <a href="#">Buy remaining items on amazon</a>
+                    </div>
+                </div>
+                <div id="recipeCards" class="card">
+                    <div class="card-image">
+                        <img src="https://static-communitytable.parade.com/wp-content/uploads/2015/08/Grilled-Chicken-1240.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More Info</a>
+                        <a href="#">Buy remaining items on amazon</a>
+                    </div>
+                </div>
+                <div id="recipeCards" class="card">
+                    <div class="card-image">
+                        <img src="https://static-communitytable.parade.com/wp-content/uploads/2015/08/Grilled-Chicken-1240.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More Info</a>
+                        <a href="#">Buy remaining items on amazon</a>
+                    </div>
+                </div>
+                <div id="recipeCards" class="card">
+                    <div class="card-image">
+                        <img src="https://static-communitytable.parade.com/wp-content/uploads/2015/08/Grilled-Chicken-1240.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More Info</a>
+                        <a href="#">Buy remaining items on amazon</a>
+                    </div>
+                </div>
+                <div id="recipeCards" class="card">
+                    <div class="card-image">
+                        <img src="https://static-communitytable.parade.com/wp-content/uploads/2015/08/Grilled-Chicken-1240.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More Info</a>
+                        <a href="#">Buy remaining items on amazon</a>
+                    </div>
+                </div>
+                <!-- Teal page content  -->
+ </div>
+</div>
+</div>
 <!-- FireBase and Script Start -->
-
 <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
-<script type="text/javascript" src="javascript/app.js">
-	
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-</script>
+<script type="text/javascript" src="javascript/app.js"></script>
+
 </body>
+
 </html>
+
+
+
+
+

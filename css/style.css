@@ -1,0 +1,63 @@
+
+body{
+background: url(http://www.foodwise.com.au/wp-content/uploads/2012/08/Background_ChoppingBoard21.jpg);
+}
+th{
+	text-align: center;
+
+}
+#h1, #h2, #h3{
+	font-size: 30px;
+	margin-top: 20px;
+	color: black; ;
+font-family: 'Shadows Into Light', cursive;
+}
+.btn-floating{
+	margin-right: 15px;
+}
+.card{
+	height:120% !important;
+}
+
+.follow{
+	float:left;
+	position: fixed;
+}
+#recipeColumn{
+	position:static;
+	float:right;
+	width: 65%;
+}
+img{
+	height:300px;
+	width:300px ;
+}
+#bar, .card-action{
+		background-color: #B7C68B;
+
+}
+.card,{
+	background-color: #DED29E;
+}
+
+#logo{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 45px;
+	text-align: center;
+	color: black;
+
+}
+#recipeCards{
+		background-color: #B3A580;
+
+
+}
+nav{
+	background-color:#F4F0CB;
+}
+.card-content{
+	background-color:#DED29E;
+}
+a{
+	color:black;
+}
