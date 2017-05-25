@@ -16,7 +16,9 @@ $(document).ready(function(){
   // };
   // firebase.initializeApp(config);
 
-var userSearchR = $("#").val().trim();
-var userSearchA = $("#").val().trim();
+var userSearchR = $("#td1").val().trim();
+var userSearchA = $("#td2").val().trim();
 var queryURLR = "https://api.edamam.com/search?q=" + userSearchR + "&app_id=38c12157&app_key=4a58a48eab717dc057b5c88ba03bb32f";
-var queryURLA = ""
+// var queryURLA = ""
+console.log(userSearchR);
+console.log(userSearchA);
