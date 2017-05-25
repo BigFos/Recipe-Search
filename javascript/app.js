@@ -24,6 +24,9 @@ var database=firebase.database();
 
     $("#ingredientAdd").on("click", function() {
         var input = $("#ingredientInput").val().trim();
+        console.log("input: ", input);
+        var ingredients ='<li class="chip green">' + input + '<i class="close material-icons">close</i></li>'
+        console.log("ingredients: ", ingredients);
         $("#ingredientList").append('<li class="chip green">' + input + '<i class="close material-icons">close</i></li>');
         ingredientArray.push(input);
         console.log($("#ingredientList").children());
@@ -53,9 +56,24 @@ var database=firebase.database();
 
 
         }).done(function(response) {
+          console.log(response);
             for (i = 0; i < response.hits.length; i++) {
-                $("#recipeCards").append('<div class="card">' + '<div class= "card-image">' + '<img src="' + response.hits[i].recipe.image + '"></div>' + '<div class="card-content">' + '<p>' + response.hits[i].recipe.label + '</p></div>' + '<div class=card-action>' + '<ul>'+ '<li>'+response.hits[i].recipe.ingredientLines +'</li>'+ '</ul>'+'<a id="list" href="'+response.hits[i].recipe.url+'">' + "Instructions" + '</a>' + '<input id="amazon" >' + "Buy Other items on Amazon" + '</input></div></div>');
+              var ingredients = response.hits[i].recipe.ingredientLines;
+              console.log("ingredients  ", ingredients);
+                
+                 var recipeImage = '<div class= "card-image">' + '<img src="' + response.hits[i].recipe.image+ '"></div>' 
+                 var recipeLabel = '<div class="card-content">' + '<p>' + response.hits[i].recipe.label + '</p></div>' 
+                 var ingredientListFromApi = ""; 
+                 for(var j=0; j<ingredients.length; j++){
+                  
+                  ingredientListFromApi += '<li>'+ingredients[j] +'</li>';
+                 }
+                 var cardActionDiv = '<div class=card-action>' +'<ul>' + ingredientListFromApi + '</ul></div>';
+
+                 var recipeUrl = '<a id="list" href="'+response.hits[i].recipe.url+'">'+ "Instructions" + '</a>' 
+                 var amazonBuy = '<input id="amazon" >' + "Buy Other items on Amazon" + '</input>';
                 $("#hide").hide();
+                $("#recipeCards").append('<div class="card">' + recipeImage + recipeLabel + cardActionDiv + recipeUrl + amazonBuy + '</div>')
             }
              database.ref().push({
                 	Ingredient: ingredientArray
