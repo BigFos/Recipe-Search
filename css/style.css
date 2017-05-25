@@ -61,7 +61,10 @@ nav{
 a{
 	color:black;
 }
-
-/*.hide{
+#amazon{
+	width: 100px;
+}
+/*
+.hide{
 	display: hide;
 }*/
