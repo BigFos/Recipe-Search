@@ -20,11 +20,13 @@ var database=firebase.database();
     var ingredientArray = [];
 
  var querySearch = "";
+ var clear="";
 
 
     $("#ingredientAdd").on("click", function() {
         var input = $("#ingredientInput").val().trim();
         console.log("input: ", input);
+         clear=input
         var ingredients ='<li class="chip green">' + input + '<i class="close material-icons">close</i></li>'
         console.log("ingredients: ", ingredients);
         $("#ingredientList").append('<li class="chip green">' + input + '<i class="close material-icons">close</i></li>');
@@ -35,6 +37,8 @@ var database=firebase.database();
         	var slice= ingredientArray.indexOf(item);
         	$(ingredientArray).splice(slice,);
         	console.log(ingredientArray);
+
+            
         });
 
 
@@ -95,15 +99,5 @@ var database=firebase.database();
 
 
 
-// Initialize Firebase
-  // var config = {
-  //   apiKey: "AIzaSyDPfYzQy3MaKGqQbEUWplRbldAMNMTdIOo",
-  //   authDomain: "recipe-search-ccf28.firebaseapp.com",
-  //   databaseURL: "https://recipe-search-ccf28.firebaseio.com",
-  //   projectId: "recipe-search-ccf28",
-  //   storageBucket: "recipe-search-ccf28.appspot.com",
-  //   messagingSenderId: "5834477742"
-  // };
-  // firebase.initializeApp(config);
 
 
