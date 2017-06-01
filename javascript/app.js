@@ -32,14 +32,23 @@ var database=firebase.database();
         console.log($("#ingredientList").children());
         console.log(ingredientArray);
         $("#ingredientInput").val("");
-        $(".close").on("click",function(item){
-        	var slice= ingredientArray.indexOf(item);
-        	$(ingredientArray).splice(slice,);
-        	console.log(ingredientArray);
-        });
+        
+        // $(".close").on("click",function(item){
+        //   var chipVal = 
+        // 	var slice= ingredientArray.indexOf(item);
+        // 	$(ingredientArray).splice(slice,);
+        // 	console.log(ingredientArray);
+        // });
 
 
     });
+
+    $(".chip").on("chip.delete", function(e, chip){
+    // you have the deleted chip here
+        var slice = ingredientArray.indexOf(input);
+         ingredientArray.splice(slice, 1);
+         console.log(ingredientArray);
+      });
 
     $("#recipeButton").on("click", function() {
     	$("#recipeCards").empty();
@@ -81,7 +90,6 @@ var database=firebase.database();
                 });
         });
         console.log(queryURLR);
-
     });
     $("#list").on("click",function(){
     	$("#hide").show();
