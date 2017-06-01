@@ -31,7 +31,7 @@ var database=firebase.database();
         ingredientArray.push(input);
         console.log($("#ingredientList").children());
         console.log(ingredientArray);
-        $("ingredientInput").val("");
+        $("#ingredientInput").val("");
         $(".close").on("click",function(item){
         	var slice= ingredientArray.indexOf(item);
         	$(ingredientArray).splice(slice,);
