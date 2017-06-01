@@ -64,7 +64,21 @@ a{
 #amazon{
 	width: 100px;
 }
-/*
-.hide{
-	display: hide;
-}*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.follow{
+position:absolute;
+margin-left: -20px;
+}
+#recipeColumn{
+	clear:both;
+	margin-top: 500px;
+	width: 100%;
+}
+.container{
+	margin:0px;
+}
+#recipeCards{
+	width: 350px;
+	margin:0px;
+}
+}
