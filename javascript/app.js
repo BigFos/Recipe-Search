@@ -34,11 +34,14 @@ $(document).ready(function() {
         console.log($("#ingredientList").children());
         console.log(ingredientArray);
         $("ingredientInput").val("");
-        $(".close").on("click", function(item) {
-            var slice = ingredientArray.indexOf(item);
-            $(ingredientArray).splice(slice, );
-            console.log(ingredientArray);
 
+     
+
+
+        $(".close").on("click",function(item){
+        	var slice= ingredientArray.indexOf(item);
+        	$(ingredientArray).splice(slice,);
+        	console.log(ingredientArray);
 
         });
 
@@ -63,20 +66,22 @@ $(document).ready(function() {
         }).done(function(response) {
             console.log(response);
             for (i = 0; i < response.hits.length; i++) {
-                var ingredients = response.hits[i].recipe.ingredientLines;
-                console.log("ingredients  ", ingredients);
-                var result = response.hits[i].recipe;
-                var recipeImage = '<div class= "card-image">' + '<img src="' + result.image + '"></div>'
-                var recipeLabel = '<div class="card-content">' + '<p>' + result.label + '</p></div>'
-                var ingredientListFromApi = "";
-                for (var j = 0; j < ingredients.length; j++) {
 
-                    ingredientListFromApi += '<li>' + ingredients[j] + '</li>';
-                }
-                var cardActionDiv = '<div class=card-action>' + '<ul>' + ingredientListFromApi + '</ul></div>';
+              var ingredients = response.hits[i].recipe.ingredientLines;
+              console.log("ingredients  ", ingredients);
+                 var result = response.hits[i].recipe;
+                 var recipeImage = '<div class= "card-image">' + '<img src="' + result.image+ '"></div>' 
+                 var recipeLabel = '<div class="card-content">' + '<p>' + result.label + '</p></div>' 
+                 var ingredientListFromApi = ""; 
+                 for(var j=0; j<ingredients.length; j++){
+                  
+                  ingredientListFromApi += '<li>'+ingredients[j] +'</li>';
+                 }
+                 var cardActionDiv = '<div class=card-action>' +'<ul>' + ingredientListFromApi + '</ul></div>';
 
-                var recipeUrl = '<a id="list" href="' + result.url + '" target="_blank">' + "Instructions" + '</a>'
-                var amazonBuy = '<input id="amazon" >' + "Buy Other items on Amazon" + '</input>';
+                 var recipeUrl = '<a id="list" href="'+result.url+'" target="_blank">'+ "Instructions" + '</a>' 
+                 var amazonBuy = '<input id="amazon" >' + "Buy Other items on Amazon" + '</input>';
+
                 $("#hide").hide();
                 $("#recipeCards").append('<div class="card">' + recipeImage + recipeLabel + cardActionDiv + recipeUrl + amazonBuy + '</div>')
             }
