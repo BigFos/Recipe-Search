@@ -71,7 +71,7 @@ var database=firebase.database();
                  }
                  var cardActionDiv = '<div class=card-action>' +'<ul>' + ingredientListFromApi + '</ul></div>';
 
-                 var recipeUrl = '<a id="list" href="'+result.url+'">'+ "Instructions" + '</a>' 
+                 var recipeUrl = '<a id="list" href="'+result.url+'" target="_blank">'+ "Instructions" + '</a>' 
                  var amazonBuy = '<input id="amazon" >' + "Buy Other items on Amazon" + '</input>';
                 $("#hide").hide();
                 $("#recipeCards").append('<div class="card">' + recipeImage + recipeLabel + cardActionDiv + recipeUrl + amazonBuy + '</div>')
