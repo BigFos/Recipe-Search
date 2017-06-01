@@ -31,6 +31,7 @@ var database=firebase.database();
         ingredientArray.push(input);
         console.log($("#ingredientList").children());
         console.log(ingredientArray);
+        $("ingredientInput").val("");
         $(".close").on("click",function(item){
         	var slice= ingredientArray.indexOf(item);
         	$(ingredientArray).splice(slice,);
@@ -60,9 +61,9 @@ var database=firebase.database();
             for (i = 0; i < response.hits.length; i++) {
               var ingredients = response.hits[i].recipe.ingredientLines;
               console.log("ingredients  ", ingredients);
-                
-                 var recipeImage = '<div class= "card-image">' + '<img src="' + response.hits[i].recipe.image+ '"></div>' 
-                 var recipeLabel = '<div class="card-content">' + '<p>' + response.hits[i].recipe.label + '</p></div>' 
+                 var result = response.hits[i].recipe;
+                 var recipeImage = '<div class= "card-image">' + '<img src="' + result.image+ '"></div>' 
+                 var recipeLabel = '<div class="card-content">' + '<p>' + result.label + '</p></div>' 
                  var ingredientListFromApi = ""; 
                  for(var j=0; j<ingredients.length; j++){
                   
@@ -70,7 +71,7 @@ var database=firebase.database();
                  }
                  var cardActionDiv = '<div class=card-action>' +'<ul>' + ingredientListFromApi + '</ul></div>';
 
-                 var recipeUrl = '<a id="list" href="'+response.hits[i].recipe.url+'">'+ "Instructions" + '</a>' 
+                 var recipeUrl = '<a id="list" href="'+result.url+'">'+ "Instructions" + '</a>' 
                  var amazonBuy = '<input id="amazon" >' + "Buy Other items on Amazon" + '</input>';
                 $("#hide").hide();
                 $("#recipeCards").append('<div class="card">' + recipeImage + recipeLabel + cardActionDiv + recipeUrl + amazonBuy + '</div>')
