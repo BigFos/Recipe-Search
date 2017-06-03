@@ -21,7 +21,6 @@ $(document).ready(function() {
     var ingredientArray = [];
     $("#resetButton").hide();
 
-    var querySearch = "";
     var clear = "";
 
 
@@ -62,7 +61,7 @@ $(document).ready(function() {
         $("#recipeCards").empty();
         $("#resetButton").show();
 
-
+        var querySearch = "";
 
         for (i = 0; i < ingredientArray.length; i++) {
 
@@ -109,15 +108,14 @@ $(document).ready(function() {
         $("#hide").show();
     });
 
-
-
-});
-
 $("#resetButton").on("click",function() {
-querySearch = "";
  ingredientArray = [];
     $("#resetButton").hide();
     $("#recipeCards").empty();
+    console.log(ingredientArray);
     $("#ingredientList").empty();
 
+    });
+
 });
+
