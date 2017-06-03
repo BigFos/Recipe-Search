@@ -46,12 +46,12 @@ $(document).ready(function() {
 
     });
 
-    $(".chip").on("chip.delete", function(e, chip){
-    // you have the deleted chip here
-        var slice = ingredientArray.indexOf(input);
-         ingredientArray.splice(slice, 1);
-         console.log(ingredientArray);
-      });
+    // $(".chip").on("chip.delete", function(e, chip){
+    // // you have the deleted chip here
+    //     var slice = ingredientArray.indexOf(input);
+    //      ingredientArray.splice(slice, 1);
+    //      console.log(ingredientArray);
+    //   });
 
     $("#recipeButton").on("click", function() {
         $("#recipeCards").empty();
