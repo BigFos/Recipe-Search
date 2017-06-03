@@ -62,9 +62,35 @@ a{
 	color:black;
 }
 #amazon{
-	width: 100px;
+	font-size: 20px;
+	font-family: 'Shadows Into Light', cursive;
+	color:black;
+
 }
-/*
-.hide{
-	display: hide;
-}*/
+#list {
+	float:left;
+	font-size: 20px;
+	font-family: 'Kaushan Script', cursive;
+	color:green;
+}
+#city{
+	margin:5px;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.follow{
+position:absolute;
+margin-left: -20px;
+}
+#recipeColumn{
+	clear:both;
+	margin-top: 500px;
+	width: 100%;
+}
+.container{
+	margin:0px;
+}
+#recipeCards{
+	width: 350px;
+	margin:0px;
+}
+}

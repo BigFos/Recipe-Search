@@ -13,6 +13,12 @@
 </head>
 
 <body>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h1>Google Maps</h1>
+        </div>
+        <p>This is where the map will go</p>
+    </div>
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
         <li><a href="https://www.linkedin.com/in/patrick-o-hara-8b959b136/">Patrick</a></li>
@@ -32,7 +38,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col s3 follow">
+            <div class="col s12 m3 l3 follow">
                 <div class="card">
                     <div id="bar" class="card-content">
                         <div id="h1">Ingredients I have</div>
@@ -43,20 +49,18 @@
                                     <span class="input-group-btn">
       <a id="ingredientAdd" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">add</i></a>
       </span>
-                                    <input  id="ingredientInput" type="text" class="form-control" placeholder="What ingredients do you have?">
+                                    <input id="ingredientInput" type="text" class="form-control" placeholder="What ingredients do you have?">
                                 </div>
                             </div>
                         </div>
                         <div id="h2">List of Ingredients</div>
                         <div class="card">
                             <div class="card-content black-text">
-
-                            	<center><div>Ingredients</div></center>
+                                <center>
+                                    <div>Ingredients</div>
+                                </center>
                                 <ul id="ingredientList">
-                                	
                                 </ul>
-                            
-                                
                                 <div class="card-action center">
                                     <a id="recipeButton" href="#">What Can I Make?</a>
                                 </div>
@@ -66,14 +70,10 @@
                 </div>
                 <!-- Grey navigation panel -->
             </div>
-            <div id="recipeColumn" class="col s9">
+            <div id="recipeColumn" class="col s12 m9 l9">
                 <div id="h3">Recipes</div>
                 <div id="recipeCards">
-                	
-
-
                 </div>
-                    
                 <!-- Teal page content  -->
             </div>
         </div>
@@ -86,9 +86,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
