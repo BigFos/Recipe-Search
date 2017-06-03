@@ -45,6 +45,7 @@ $(document).ready(function() {
             ingredientArray.splice(slice, 1);
             console.log(ingredientArray);
             console.log(food);
+            querySearch = "";
         });
 
     });
