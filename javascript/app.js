@@ -37,7 +37,6 @@ $(document).ready(function() {
         // var chipVal = $(''+ input +'').id();
         // console.log(chipVal);
 
-
         $("#ingredientInput").val("");
 
         $("#"+input).on("click", function() {
@@ -77,7 +76,6 @@ $(document).ready(function() {
             console.log(response);
             for (i = 0; i < response.hits.length; i++) {
 
-
                 var ingredients = response.hits[i].recipe.ingredientLines;
                 console.log("ingredients  ", ingredients);
                 var result = response.hits[i].recipe;
@@ -96,13 +94,6 @@ $(document).ready(function() {
                 $("#hide").hide();
                 $("#recipeCards").append('<div class="card">' + recipeImage + recipeLabel + cardActionDiv + recipeUrl + amazonBuy + '</div>')
 
-            } 
-            database.ref().push({
-                Ingredient: ingredientArray
-            });
-        });
-        console.log(queryURLR);
-
 
             } 
             database.ref().push({
@@ -110,7 +101,6 @@ $(document).ready(function() {
             });
         });
         console.log(queryURLR);
-
     });
     $("#list").on("click", function() {
         $("#hide").show();
@@ -118,4 +108,4 @@ $(document).ready(function() {
 
 
 
-}
+});
