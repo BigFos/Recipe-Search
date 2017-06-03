@@ -28,29 +28,33 @@ $(document).ready(function() {
         var input = $("#ingredientInput").val().trim();
         $("#ingredientInput").val("");
         console.log("input: ", input);
-        var ingredients = '<li class="chip green">' + input + '<i class="close material-icons">close</i></li>'
+        var ingredients = '<li class="chip green" id="'+ input + '">' + input + '<i class="close material-icons">close</i></li>'
         console.log("ingredients: ", ingredients);
-        $("#ingredientList").append('<li class="chip green">' + input + '<i class="close material-icons">close</i></li>');
+        $("#ingredientList").append(ingredients);
         ingredientArray.push(input);
         console.log($("#ingredientList").children());
         console.log(ingredientArray);
+        // var chipVal = $(''+ input +'').id();
+        // console.log(chipVal);
 
         $("#ingredientInput").val("");
 
-        $(".close").on("click", function(item) {
-            var slice = ingredientArray.indexOf(item);
-            $(ingredientArray).splice(slice, );
+        $("#"+input).on("click", function() {
+            var food = input;
+            var slice = ingredientArray.indexOf(food);
+            ingredientArray.splice(slice, 1);
             console.log(ingredientArray);
+            console.log(food);
         });
 
     });
 
-    $(".chip").on("chip.delete", function(e, chip){
-    // you have the deleted chip here
-        var slice = ingredientArray.indexOf(input);
-         ingredientArray.splice(slice, 1);
-         console.log(ingredientArray);
-      });
+    // $(".chip").on("chip.delete", function(e, chip){
+    // // you have the deleted chip here
+    //     var slice = ingredientArray.indexOf(input);
+    //      ingredientArray.splice(slice, 1);
+    //      console.log(ingredientArray);
+    //   });
 
     $("#recipeButton").on("click", function() {
         $("#recipeCards").empty();
@@ -96,8 +100,6 @@ $(document).ready(function() {
             });
         });
         console.log(queryURLR);
-        ingredientArray = [""];
-        console.log(querySearch);
     });
     $("#list").on("click", function() {
         $("#hide").show();
