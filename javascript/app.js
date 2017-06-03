@@ -19,6 +19,7 @@ $(document).ready(function() {
     var database = firebase.database();
 
     var ingredientArray = [];
+    $("#resetButton").hide();
 
     var querySearch = "";
     var clear = "";
@@ -59,6 +60,8 @@ $(document).ready(function() {
 
     $("#recipeButton").on("click", function() {
         $("#recipeCards").empty();
+        $("#resetButton").show();
+
 
 
         for (i = 0; i < ingredientArray.length; i++) {
@@ -107,5 +110,14 @@ $(document).ready(function() {
     });
 
 
+
+});
+
+$("#resetButton").on("click",function() {
+querySearch = "";
+ ingredientArray = [];
+    $("#resetButton").hide();
+    $("#recipeCards").empty();
+    $("#ingredientList").empty();
 
 });
