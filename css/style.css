@@ -12,6 +12,7 @@ th{
 	color: black; ;
 font-family: 'Shadows Into Light', cursive;
 }
+
 .btn-floating{
 	margin-right: 15px;
 }
@@ -23,6 +24,7 @@ font-family: 'Shadows Into Light', cursive;
 	float:left;
 	position: fixed;
 }
+
 #recipeColumn{
 	position:static;
 	float:right;
@@ -47,9 +49,15 @@ img{
 	color: black;
 
 }
+p,#recipeButton,#resetButton{
+	text-align: center;
+	font-family: 'Kaushan Script', cursive;
+	color: black;
+/*	margin-bottom: 15px;*/
+
+}
 #recipeCards{
 		background-color: #B3A580;
-
 
 }
 nav{
@@ -68,7 +76,7 @@ a{
 
 }
 #list {
-	float:left;
+	margin: 5px;
 	font-size: 20px;
 	font-family: 'Kaushan Script', cursive;
 	color:green;

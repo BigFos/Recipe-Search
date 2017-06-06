@@ -19,7 +19,7 @@ $(document).ready(function() {
     var database = firebase.database();
 
     var ingredientArray = [];
-    $("#resetButton").hide();
+    
 
     var clear = "";
 
@@ -90,11 +90,11 @@ $(document).ready(function() {
                 }
                 var cardActionDiv = '<div class=card-action>' + '<ul>' + ingredientListFromApi + '</ul></div>';
 
-                var recipeUrl = '<a id="list" href="' + result.url + '" target="_blank">' + "Instructions" + '</a>'
-                var amazonBuy = '<input placeholder="Enter City" id="amazon" >' + '<button data-target="modal1" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">location_on</i></button>' + "Missing ingredients? Find your local Grocery Store" + '</input>';
+                var recipeUrl = '<a id="list" href="' + result.url + '" target="_blank">' + "Instructions" + '</a>';
+               
 
                 $("#hide").hide();
-                $("#recipeCards").append('<div class="card">' + recipeImage + recipeLabel + cardActionDiv + recipeUrl + amazonBuy + '</div>')
+                $("#recipeCards").append('<div class="card">' + recipeImage + recipeLabel + cardActionDiv + recipeUrl + '</div>');
 
 
             } 
@@ -110,7 +110,7 @@ $(document).ready(function() {
 
 $("#resetButton").on("click",function() {
  ingredientArray = [];
-    $("#resetButton").hide();
+    
     $("#recipeCards").empty();
     console.log(ingredientArray);
     $("#ingredientList").empty();
