@@ -6,6 +6,14 @@ th{
 	text-align: center;
 
 }
+#na{
+	font-size: 50px;
+	font-family: 'Shadows Into Light', cursive;
+}
+#overflow{
+	    max-height: 570px;
+    overflow: auto;
+}
 #h1, #h2, #h3{
 	font-size: 30px;
 	margin-top: 20px;
@@ -23,6 +31,7 @@ font-family: 'Shadows Into Light', cursive;
 .follow{
 	float:left;
 	position: fixed;
+
 }
 
 #recipeColumn{
