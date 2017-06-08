@@ -10,6 +10,11 @@ th{
 	font-size: 50px;
 	font-family: 'Shadows Into Light', cursive;
 }
+#chef{
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+}
 #overflow{
 	    max-height: 570px;
     overflow: auto;
