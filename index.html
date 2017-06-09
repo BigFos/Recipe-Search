@@ -43,7 +43,7 @@
                                     <span class="input-group-btn">
       <a id="ingredientAdd" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">add</i></a>
       </span>
-                                    <input id="ingredientInput" type="text" class="form-control" placeholder="Enter ingredients you have!">
+                                    <input id="ingredientInput" type="text" class="form-control" placeholder="Add ingredients you have!">
                                 </div>
                             </div>
                         </div>
@@ -56,11 +56,13 @@
                                 <ul id="ingredientList">
                                 </ul>
                                 <div class="card-action center">
-                                    <a id="recipeButton" href="#">What Can I Make?</a>
+                                    <button id="recipeButton" class="btn waves-effect waves-light green" type="submit" name="action">Search Recipes!
+                                        <i class="material-icons right"></i>
+                                    </button>
                                 </div>
                                 <div>
                                     <!-- <center> <a id="resetButton" href="#">New Search</a></center> -->
-                                    <p><a href="map.html" target="_blank" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">location_on</i></a><a id="resetButton" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">replay</i></a></p>
+                                    <p><a href="map.html" target="_blank" class="btn-floating btn-small waves-effect waves-light green tooltipped" data-position="left" data-delay="50" data-tooltip="Grocery Stores Nearby!"><i class="material-icons">location_on</i></a><a id="resetButton" class="btn-floating btn-small waves-effect waves-light green tooltipped" data-position="right" data-delay="50" data-tooltip="Clear Search""><i class="material-icons">replay</i></a></p>
                                 </div>
                             </div>
                         </div>

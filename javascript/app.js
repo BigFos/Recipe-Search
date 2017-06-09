@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     $('.dropdown-button').dropdown();
      $('.modal').modal();
+      $('.tooltipped').tooltip({delay: 50});
 
 
     // Initialize Firebase
